@@ -51,3 +51,12 @@ heap.c:40:3: error: ‘i’ is used uninitialized in this function [-Werror=unin
 cc1: all warnings being treated as errors
 Compilation failed
 698f161
+Sun 16 Oct 2022 11:20:58 PM UTC: 
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:40:3: error: ‘i’ is used uninitialized in this function [-Werror=uninitialized]
+   40 |   for(int i ; i < new->capac ; i++)
+      |   ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+122e87a
