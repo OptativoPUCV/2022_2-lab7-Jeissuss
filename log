@@ -213,3 +213,14 @@ heap.c:41:3: error: ‘i’ is used uninitialized in this function [-Werror=unin
 cc1: all warnings being treated as errors
 Compilation failed
 c903324
+Sun 16 Oct 2022 11:23:56 PM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:41:3: error: ‘i’ is used uninitialized in this function [-Werror=uninitialized]
+   41 |   for(int i ; i < new->capac ; i++)
+      |   ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+9482a70

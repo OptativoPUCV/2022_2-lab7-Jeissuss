@@ -37,7 +37,7 @@ Heap* createHeap(){
   new->capac = 3;
   new->size = 0;
   new->heapArray = (heapElem *)malloc(3*sizeof(heapElem));
-  int i;
+  
   for(int i ; i < new->capac ; i++)
   {
     new->heapArray[i].data = NULL;
