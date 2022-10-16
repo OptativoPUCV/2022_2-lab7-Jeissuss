@@ -199,3 +199,17 @@ heap.c:40:3: error: ‘i’ is used uninitialized in this function [-Werror=unin
 cc1: all warnings being treated as errors
 Compilation failed
 dfa45c9
+Sun 16 Oct 2022 11:23:46 PM UTC: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:40:7: error: unused variable ‘i’ [-Werror=unused-variable]
+   40 |   int i;
+      |       ^
+heap.c:41:3: error: ‘i’ is used uninitialized in this function [-Werror=uninitialized]
+   41 |   for(int i ; i < new->capac ; i++)
+      |   ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+c903324
