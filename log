@@ -188,3 +188,14 @@ test.c:6:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 72725f9
+Sun 16 Oct 2022 11:22:34 PM UTC: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:40:3: error: ‘i’ is used uninitialized in this function [-Werror=uninitialized]
+   40 |   for(int i ; i < new->capac ; i++)
+      |   ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+dfa45c9

@@ -43,3 +43,4 @@ Heap* createHeap(){
     new->heapArray[i].priority = 0;
   }
   return new;
+}
