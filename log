@@ -16,3 +16,11 @@ heap.c:36:3: error: conversion to non-scalar type requested
       |   ^~~~
 Compilation failed
 be8a750
+Sun 16 Oct 2022 11:20:21 PM UTC: 
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:36:3: error: conversion to non-scalar type requested
+   36 |   Heap * new = (Heap )malloc(sizeof(Heap));
+      |   ^~~~
+Compilation failed
+fda6d92
