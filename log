@@ -236,3 +236,17 @@ Sun 16 Oct 2022 11:47:30 PM UTC:
  tests:  2|2
 total_score: 20/70
 dce7c23
+Sun 16 Oct 2022 11:48:55 PM UTC: 
+ heap.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:36:7: error: unused variable ‘talla’ [-Werror=unused-variable]
+   36 |   int talla = pq->size;
+      |       ^~~~~
+heap.c:35:8: error: unused variable ‘i’ [-Werror=unused-variable]
+   35 |    int i = 0;
+      |        ^
+cc1: all warnings being treated as errors
+Compilation failed
+2cffc3c
