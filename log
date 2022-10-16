@@ -60,3 +60,26 @@ heap.c:40:3: error: ‘i’ is used uninitialized in this function [-Werror=unin
 cc1: all warnings being treated as errors
 Compilation failed
 122e87a
+Sun 16 Oct 2022 11:21:06 PM UTC: 
+ heap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+test.c: In function ‘createHeap’:
+test.c:276:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  276 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:292:1: error: expected declaration or statement at end of input
+  292 | }
+      | ^
+test.c:12:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+   12 | char msg[300];
+      |      ^~~
+At top level:
+test.c:276:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  276 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:6:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
+    6 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b3e5660
