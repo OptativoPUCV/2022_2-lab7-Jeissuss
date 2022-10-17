@@ -250,3 +250,18 @@ heap.c:35:8: error: unused variable ‘i’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 2cffc3c
+Mon 17 Oct 2022 12:01:38 AM UTC: 
+ heap.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:48:33: error: ‘padre’ undeclared (first use in this function)
+   48 |     int auxPrio = pq->heapArray[padre].priority;
+      |                                 ^~~~~
+heap.c:48:33: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:48:9: error: unused variable ‘auxPrio’ [-Werror=unused-variable]
+   48 |     int auxPrio = pq->heapArray[padre].priority;
+      |         ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+3623964
