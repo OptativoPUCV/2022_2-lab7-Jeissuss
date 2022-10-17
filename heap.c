@@ -42,7 +42,7 @@ void heap_push(Heap* pq, void* data, int priority){
   pq->heapArray[talla].data = data;
   pq->heapArray[talla].priority = priority;
   pq->size = talla+1;
-  for(i = pq->size ; i>= 0 ; i--)www
+  for(i = pq->size ; i>= 0 ; i--)
   {
     int posActual = i -1;
     int padre = (posActual - 1)/2;
