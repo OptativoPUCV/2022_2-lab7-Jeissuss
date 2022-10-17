@@ -568,3 +568,122 @@ heap.c:58:5: error: expected ‘;’ before ‘}’ token
       | ~    
 Compilation failed
 4a50d71
+Mon 17 Oct 2022 01:35:53 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:58:4: error: ‘n’ undeclared (first use in this function)
+   58 |   }n
+      |    ^
+heap.c:58:4: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:58:5: error: expected ‘;’ before ‘}’ token
+   58 |   }n
+      |     ^
+      |     ;
+   59 | 
+   60 | }
+      | ~    
+heap.c: In function ‘heap_pop’:
+heap.c:64:3: error: parameter ‘talla’ is initialized
+   64 |   int talla = pq->size;
+      |   ^~~
+heap.c:64:15: error: ‘pq’ undeclared (first use in this function)
+   64 |   int talla = pq->size;
+      |               ^~
+heap.c:66:3: error: parameter ‘auxPrio’ is initialized
+   66 |   int auxPrio = pq->heapArray[talla -1].priority;
+      |   ^~~
+heap.c:67:3: error: parameter ‘auxData’ is initialized
+   67 |   void* auxData = pq->heapArray[talla -1].data;
+      |   ^~~~
+heap.c:69:3: error: expected declaration specifiers before ‘printf’
+   69 |   printf("\n");
+      |   ^~~~~~
+heap.c:70:3: error: expected declaration specifiers before ‘pq’
+   70 |   pq->heapArray[talla].priority = pq->heapArray[0].priority;
+      |   ^~
+heap.c:71:3: error: expected declaration specifiers before ‘pq’
+   71 |   pq->heapArray[talla].data = pq->heapArray[0].data;
+      |   ^~
+heap.c:72:3: error: expected declaration specifiers before ‘pq’
+   72 |   pq->heapArray[0].priority = auxPrio;
+      |   ^~
+heap.c:73:3: error: expected declaration specifiers before ‘pq’
+   73 |   pq->heapArray[0].data = auxData;
+      |   ^~
+heap.c:74:3: error: expected declaration specifiers before ‘pq’
+   74 |   pq->heapArray[talla -1].priority = 0;
+      |   ^~
+heap.c:75:3: error: expected declaration specifiers before ‘pq’
+   75 |   pq->heapArray[talla -1].data = NULL;
+      |   ^~
+heap.c:76:3: error: expected declaration specifiers before ‘pq’
+   76 |   pq->size = talla - 1;
+      |   ^~
+heap.c:78:3: error: expected declaration specifiers before ‘for’
+   78 |   for(int i = 0 ; i < pq->size-1 ; i++)
+      |   ^~~
+heap.c:78:19: error: expected declaration specifiers before ‘i’
+   78 |   for(int i = 0 ; i < pq->size-1 ; i++)
+      |                   ^
+heap.c:78:36: error: expected declaration specifiers before ‘i’
+   78 |   for(int i = 0 ; i < pq->size-1 ; i++)
+      |                                    ^
+heap.c:119:1: error: expected declaration specifiers before ‘}’ token
+  119 | }
+      | ^
+heap.c:121:19: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  121 | Heap* createHeap(){
+      |                   ^
+test.c:6:34: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+    6 | char * _strdup(const char * str) {
+      |                                  ^
+test.c:13:1: error: parameter ‘test_id’ is initialized
+   13 | int test_id = -1;
+      | ^~~
+test.c:16:14: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   16 | int success(){
+      |              ^
+test.c:21:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   21 | void err_msg(char* msg){
+      |                        ^
+test.c:28:23: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   28 | void ok_msg(char* msg){
+      |                       ^
+test.c:34:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   34 | void info_msg(char* msg){
+      |                         ^
+test.c:39:75: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   39 | int test_suite(int(*test)(), char* msg, int max_score, int id, int req_id){
+      |                                                                           ^
+test.c:55:25: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   55 | void view_array(Heap* h){
+      |                         ^
+test.c:64:24: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   64 | Heap* initialize_heap(){
+      |                        ^
+test.c:80:18: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+   80 | int test_create(){
+      |                  ^
+test.c:116:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  116 | int test_top(){
+      |               ^
+test.c:145:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  145 | int test_push(){
+      |                ^
+test.c:222:15: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  222 | int test_pop(){
+      |               ^
+test.c:276:36: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘{’ token
+  276 | int main( int argc, char *argv[] ) {
+      |                                    ^
+In file included from test.c:4:
+heap.c:63:6: error: old-style parameter declarations in prototyped function definition
+   63 | void heap_pop(Heap* pq)
+      |      ^~~~~~~~
+test.c:292: error: expected ‘{’ at end of input
+  292 | }
+      | 
+Compilation failed
+872927a
