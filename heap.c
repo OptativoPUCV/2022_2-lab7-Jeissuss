@@ -44,9 +44,17 @@ void heap_push(Heap* pq, void* data, int priority){
   pq->size = talla+1;
   for(i = pq->size ; i>= 0 ; i--)
   {
-    
-    int auxPrio = pq->heapArray[padre].priority;
-    
+    int posActual = i -1;
+    int padre = (posActual - 1)/2;
+    if(pq->heapArray[posActual].priority > pq->heapArray[padre].priority)
+    {
+      int auxPrio = pq->heapArray[padre].priority;
+      void* auxData = pq->heapArray[padre].data;
+      pq->heapArray[padre].priority = pq->heapArray[posActual].priority;
+      pq->heapArray[padre].data = pq->heapArray[posActual].data;
+      pq->heapArray[posActual].priority = auxPrio;
+      pq->heapArray[posActual].data = auxData;
+    }
   }
   
 }

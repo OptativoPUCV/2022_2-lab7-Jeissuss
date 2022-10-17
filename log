@@ -265,3 +265,9 @@ heap.c:48:9: error: unused variable ‘auxPrio’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 3623964
+Mon 17 Oct 2022 12:08:30 AM UTC: 
+ heap.c | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+ tests:  7|1
+total_score: 45/70
+ab4095e
