@@ -550,3 +550,21 @@ Mon 17 Oct 2022 01:34:44 AM UTC:
  tests:  8|0
 total_score: 70/70
 1b80e4e
+Mon 17 Oct 2022 01:35:18 AM UTC: 
+ heap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:58:4: error: ‘n’ undeclared (first use in this function)
+   58 |   }n
+      |    ^
+heap.c:58:4: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:58:5: error: expected ‘;’ before ‘}’ token
+   58 |   }n
+      |     ^
+      |     ;
+   59 | 
+   60 | }
+      | ~    
+Compilation failed
+4a50d71
