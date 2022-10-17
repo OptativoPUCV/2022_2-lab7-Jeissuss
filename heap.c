@@ -55,6 +55,7 @@ void heap_push(Heap* pq, void* data, int priority){
       pq->heapArray[posActual].priority = auxPrio;
       pq->heapArray[posActual].data = auxData;
     }
+  }
 }
 
 
