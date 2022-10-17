@@ -56,12 +56,18 @@ void heap_push(Heap* pq, void* data, int priority){
       pq->heapArray[posActual].data = auxData;
     }
 }
-  
-
 
 
 void heap_pop(Heap* pq){
-
+int talla = pq->size;
+  
+  int auxPrio = pq->heapArray[talla -1].priority;
+  
+  printf("\n");
+  pq->heapArray[talla].priority = pq->heapArray[0].priority;
+  
+  
+ 
 }
 
 Heap* createHeap(){
