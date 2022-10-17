@@ -104,7 +104,7 @@ void heap_pop(Heap* pq){
       {
         pq->heapArray[i].priority = pq->heapArray[hijo2].priority;
         
-        pq->heapArray[hijo2].priority = auxPrio;
+       ;
         pq->heapArray[hijo2].data = auxData;  
         i = hijo2;
       }
