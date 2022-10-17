@@ -96,14 +96,14 @@ void heap_pop(Heap* pq){
         i = hijo1;
       }
       else
-      break;
+        break;
     }
     else if(pq->heapArray[hijo1].priority < pq->heapArray[hijo2].priority)
     {
       if(pq->heapArray[i].priority < pq->heapArray[hijo2].priority)
       {
         pq->heapArray[i].priority = pq->heapArray[hijo2].priority;
-        pq->heapArray[i].data = pq->heapArray[hijo2].data;
+        
         pq->heapArray[hijo2].priority = auxPrio;
         pq->heapArray[hijo2].data = auxData;  
         i = hijo2;
@@ -113,7 +113,7 @@ void heap_pop(Heap* pq){
     }
     else
       break;
-  } 
+  }
 }
 
 Heap* createHeap(){
